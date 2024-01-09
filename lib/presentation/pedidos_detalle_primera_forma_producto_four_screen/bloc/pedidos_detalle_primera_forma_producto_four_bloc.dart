@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:pedidos/presentation/pedidos_detalle_primera_forma_producto_four_screen/models/pedidos_detalle_primera_forma_producto_four_model.dart';part 'pedidos_detalle_primera_forma_producto_four_event.dart';part 'pedidos_detalle_primera_forma_producto_four_state.dart';/// A bloc that manages the state of a PedidosDetallePrimeraFormaProductoFour according to the event that is dispatched to it.
+class PedidosDetallePrimeraFormaProductoFourBloc extends Bloc<PedidosDetallePrimeraFormaProductoFourEvent, PedidosDetallePrimeraFormaProductoFourState> {PedidosDetallePrimeraFormaProductoFourBloc(PedidosDetallePrimeraFormaProductoFourState initialState) : super(initialState) { on<PedidosDetallePrimeraFormaProductoFourInitialEvent>(_onInitialize); }
+
+_onInitialize(PedidosDetallePrimeraFormaProductoFourInitialEvent event, Emitter<PedidosDetallePrimeraFormaProductoFourState> emit, ) async  {  } 
+ }

@@ -1,0 +1,7 @@
+import 'bloc/pantalla_de_inicio_bloc.dart';import 'models/pantalla_de_inicio_model.dart';import 'package:flutter/material.dart';import 'package:pedidos/core/app_export.dart';class PantallaDeInicioScreen extends StatelessWidget {const PantallaDeInicioScreen({Key? key}) : super(key: key);
+
+static Widget builder(BuildContext context) { return BlocProvider<PantallaDeInicioBloc>(create: (context) => PantallaDeInicioBloc(PantallaDeInicioState(pantallaDeInicioModelObj: PantallaDeInicioModel()))..add(PantallaDeInicioInitialEvent()), child: PantallaDeInicioScreen()); } 
+@override Widget build(BuildContext context) { return BlocBuilder<PantallaDeInicioBloc, PantallaDeInicioState>(builder: (context, state) {return SafeArea(child: Scaffold(backgroundColor: appTheme.black900, body: SizedBox(width: double.maxFinite, child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(height: 5.v), GestureDetector(onTap: () {onTapAnimation(context);}, child: Container(height: 150.adaptSize, width: 150.adaptSize, padding: EdgeInsets.symmetric(horizontal: 38.h, vertical: 11.v), decoration: AppDecoration.gradientPinkToPrimary.copyWith(borderRadius: BorderRadiusStyle.circleBorder75), child: CustomImageView(imagePath: ImageConstant.imgGroupGray10002, height: 126.v, width: 72.h, alignment: Alignment.center)))]))));}); } 
+/// Navigates to the inicioScreen when the action is triggered.
+onTapAnimation(BuildContext context) { NavigatorService.pushNamed(AppRoutes.inicioScreen, ); } 
+ }
